@@ -11,9 +11,10 @@
   height:44px;
   padding-top:5px;
 }
-#customBtn:hover {
+#customBtn:hover{
   cursor: pointer;
   background-color: #343A40;
+  color:white;
 }
 span.label {
   font-family: serif;
@@ -29,7 +30,7 @@ span.label {
   width: 42px;
   height: 42px;
 } */
-span.buttonText:hover{
+#customBtn:hover span.buttonText{
     color:white;
 }
 span.buttonText {
