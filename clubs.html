@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -60,7 +61,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
-      <div class="container-fluid" style="text-align:center;padding-top:50px;">
+      <div class="container-fluid" style="text-align:center;padding-top:50px;padding-bottom:50px;">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active col-md-6" id="nav-home-tab" data-toggle="tab" href="#nav-bio" role="tab" aria-controls="nav-bio" aria-selected="true">Bio</a>
@@ -71,54 +72,77 @@
           <div class="tab-content" id="nav-tabContent">
             <div class="container tab-pane fade show active pt-5" id="nav-bio" role="tabpanel" aria-labelledby="nav-bio-tab" style="text-align:left;">
                 <form>
+                    <h4 style="text-align:center">Bio</h4>
                     <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <div class="form-group col-md-8">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      <div class="form-group col-md-4">
+                        <label for="inputGenre">Genre</label>
+                        <select id="inputGenre" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>Humanities</option>
+                          <option>Arts</option>
+                          <option>STEM</option>
+                          <option>Other</option>
+                        </select>
                       </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align:center">
+                            <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                  <label class="form-check-label" for="gridCheck">
+                                    Community Service Offered
+                                  </label>
+                                </div>
+                              </div>
+                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <label for="ClubBio">Bio</label>
+                        <textarea class="form-control" id="ClubBio" rows="5"></textarea>
+                        <p><em>150 word limit</em></p>
+                      </div>
+                    <div class="form-group">
+                      <label for="ClubOfficers">Officers</label>
+                      <input type="text" class="form-control" id="ClubOfficers" placeholder="Name, Name, Name...">
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress2">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
+                        <label for="ClubAdvisor">Student Advisor</label>
+                        <input type="text" class="form-control" id="ClubAdvisor" placeholder="Name">
+                      </div>
+                    <div class="row">
+                      <div class="col-md-9">
                         <label for="inputCity">City</label>
                         <input type="text" class="form-control" id="inputCity">
                       </div>
-                      <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                          <option selected>Choose...</option>
-                          <option>...</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Check me out
-                        </label>
+                      <div class="col-md-3">
+                        <form>
+                        <label>Club Logo</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" accept="image/x-png,image/jpg">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        </form>
+
+                        <script>
+                            // Add the following code if you want the name of the file appear on select
+                            $(".custom-file-input").on("change", function() {
+                              var fileName = $(this).val().split("\\").pop();
+                              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                            });
+                        </script>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary mt-3">Save</button>
                   </form>
             </div>
             <div class="container tab-pane fade pt-5" id="nav-members" role="tabpanel" aria-labelledby="nav-members-tab" style="text-align:left;">
                 <form>
+                    <h4 style="text-align:center">Members</h4>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
