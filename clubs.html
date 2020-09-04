@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSS Clubs</title>
+
     <!-- Stylesheets & Scripts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+   
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Styles & Scripts -->
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/app.js"></script>
 </head>
 <body>
@@ -157,49 +165,286 @@
             <div class="container tab-pane fade pt-5" id="nav-members" role="tabpanel" aria-labelledby="nav-members-tab" style="text-align:left;">
                 <form>
                     <h4 style="text-align:center">Members</h4>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputAddress">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="form-group">
-                      <label for="inputAddress2">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                          <option selected>Choose...</option>
-                          <option>...</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Check me out
-                        </label>
-                      </div>
-                    </div>
+                    <table id="example" class="hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>21tn3449@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>23gw4931@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>22ac3483@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>24ck8976@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>21as4938@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Brielle Williamson</td>
+                                <td>22bw4356@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Herrod Chandler</td>
+                                <td>21hc4738@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Rhona Davidson</td>
+                                <td>24rd8907@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Colleen Hurst</td>
+                                <td>23ch3498@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Sonya Frost</td>
+                                <td>22sf8493@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jena Gaines</td>
+                                <td>23jg4415@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Quinn Flynn</td>
+                                <td>24qf6767@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Charde Marshall</td>
+                                <td>21cm3490@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Haley Kennedy</td>
+                                <td>22hk8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Tatyana Fitzpatrick</td>
+                                <td>23tf0987@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Silva</td>
+                                <td>23ms6776@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Byrd</td>
+                                <td>22pb8943@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Gloria Little</td>
+                                <td>28gl1221@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Bradley Greer</td>
+                                <td>23bg7656@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Dai Rios</td>
+                                <td>21dr6543@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jenette Caldwell</td>
+                                <td>22jc8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Yuri Berry</td>
+                                <td>23yb7654@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>21tn3449@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>23gw4931@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>22ac3483@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>24ck8976@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>21as4938@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Brielle Williamson</td>
+                                <td>22bw4356@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Herrod Chandler</td>
+                                <td>21hc4738@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Rhona Davidson</td>
+                                <td>24rd8907@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Colleen Hurst</td>
+                                <td>23ch3498@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Sonya Frost</td>
+                                <td>22sf8493@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jena Gaines</td>
+                                <td>23jg4415@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Quinn Flynn</td>
+                                <td>24qf6767@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Charde Marshall</td>
+                                <td>21cm3490@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Haley Kennedy</td>
+                                <td>22hk8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Tatyana Fitzpatrick</td>
+                                <td>23tf0987@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Silva</td>
+                                <td>23ms6776@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Byrd</td>
+                                <td>22pb8943@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Gloria Little</td>
+                                <td>28gl1221@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Bradley Greer</td>
+                                <td>23bg7656@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Dai Rios</td>
+                                <td>21dr6543@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jenette Caldwell</td>
+                                <td>22jc8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Yuri Berry</td>
+                                <td>23yb7654@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>21tn3449@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>23gw4931@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>22ac3483@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>24ck8976@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>21as4938@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Brielle Williamson</td>
+                                <td>22bw4356@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Herrod Chandler</td>
+                                <td>21hc4738@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Rhona Davidson</td>
+                                <td>24rd8907@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Colleen Hurst</td>
+                                <td>23ch3498@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Sonya Frost</td>
+                                <td>22sf8493@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jena Gaines</td>
+                                <td>23jg4415@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Quinn Flynn</td>
+                                <td>24qf6767@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Charde Marshall</td>
+                                <td>21cm3490@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Haley Kennedy</td>
+                                <td>22hk8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Tatyana Fitzpatrick</td>
+                                <td>23tf0987@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Silva</td>
+                                <td>23ms6776@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Byrd</td>
+                                <td>22pb8943@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Gloria Little</td>
+                                <td>28gl1221@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Bradley Greer</td>
+                                <td>23bg7656@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Dai Rios</td>
+                                <td>21dr6543@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Jenette Caldwell</td>
+                                <td>22jc8998@wwprsd.org</td>
+                            </tr>
+                            <tr>
+                                <td>Yuri Berry</td>
+                                <td>23yb7654@wwprsd.org</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </tfoot>
+                    </table>
                     <button type="submit" class="btn btn-primary">Sign in</button>
                   </form>
             </div>
