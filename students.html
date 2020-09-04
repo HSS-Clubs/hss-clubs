@@ -25,32 +25,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="js/app.js"></script>
-    <script>
-   var googleUser = {};
-  var startApp = function() {
-    gapi.load('auth2', function(){
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: '200579288184-pc5odbit1bduskobrae8no4orhaoa6jl.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
-      });
-      attachSignin(document.getElementById('customBtn'));
-    });
-  };
-
-  function attachSignin(element) {
-    console.log(element.id);
-    auth2.attachClickHandler(element, {},
-        function(googleUser) {
-            alert("wasspoppin " + googleUser.getBasicProfile().getName())
-          document.getElementById('name').innerText = "Signed in: " +
-              googleUser.getBasicProfile().getName();
-        }, function(error) {
-        });
-  }
-      </script>
+    <script src="js/script.js"></script>
+    
 </head>
 <body>
 
@@ -77,28 +53,38 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="signOutButton" style="visibility:hidden" onclick="signOut()">Sign Out</a>
+                    </li>
                 </ul>
             </div>
         </div>
       </nav>
 
-      <div class="container"style="padding-top:30vh;">
-        <div class="row">
+      <div id="bodyContent" class="container"style="padding-top:30vh;">
+        <div id="loggedOut" style="visibility: hidden;" class="row">
           <div class="col text-center">
             <h1 class="display-2">join a club</h1>
      
             <div id="gSignInWrapper">
-                <div id="customBtn" class="customGPlusSignIn">
+                <div id="customBtn" class="customGPlusSignIn" data-onsuccess="onSignIn">
                     <img width="20px" class="icon" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                     <span class="buttonText">Login With Google</span>
                 </div>
               </div>
-              <div id="name"></div>
-
+              <div id="name" style="font-size:13px;padding-top:10px">Sign in to begin joining clubs!</div>
+              <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+              <!-- <button onclick="checkIfLoggedIn()">Check Sign in</button> -->
         </div>
           </div>
+          <nav id="loggedIn" style="visibility: hidden;">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active col-md-6" id="nav-home-tab" data-toggle="tab" href="#nav-bio" role="tab" aria-controls="nav-bio" aria-selected="true">Bio</a>
+              <a class="nav-item nav-link col-md-6" id="nav-profile-tab" data-toggle="tab" href="#nav-members" role="tab" aria-controls="nav-members" aria-selected="false">Members</a>
+              <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
+            </div>
+          </nav>
         </div>
       <script>startApp();</script>
-
     </body>
 </html>
