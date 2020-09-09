@@ -92,7 +92,7 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <a href="https://www.google.com/"><button class="cardButton">Next Chapter</button></a>   
+                     <button onclick="playSound()"class="cardButton">Click here kids</button>
                   </div>
                   </div>
 
@@ -105,10 +105,16 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <a href="https://www.google.com/"><button class="cardButton">Next Chapter</button></a>   
+                      <button onclick="playSound()"class="cardButton">Click here kids</button>
                   </div>
                   </div>
-      
+                  <audio id="audio" src="movie_1.mp3" autoplay="false" ></audio>
+                  <script>
+                  function playSound() {
+                        var sound = document.getElementById("audio");
+                        sound.play();
+                    }
+                  </script>
               </div>
                 <!-- Sign Up -->
                 <input type="radio" class="tabs__button" name="signForm" id="signUp" />
@@ -123,7 +129,8 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <a href="https://www.google.com/"><button class="cardButton">Next Chapter</button></a>   
+                      <button onclick="playSound()" class="cardButton">Click here kids</button>   
+                      
                   </div>
                   </div>
            
