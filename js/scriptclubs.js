@@ -1,4 +1,5 @@
 window.addEventListener('load', function () {
+  
     checkIfLoggedIn()
     })
     
@@ -7,7 +8,7 @@ window.addEventListener('load', function () {
   
     
 
-    
+
       
       function signOut() {
           sessionStorage.clear();
