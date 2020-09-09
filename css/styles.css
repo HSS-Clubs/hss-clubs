@@ -5,7 +5,9 @@ body {
 .jumbotron {
     height:100vh;
 }
-
+.hide{
+  display:none;
+}
 .navbar {
     margin-bottom: 0px;
 }
@@ -47,3 +49,76 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+  /* TABS ON STUDENT PAGE START*/
+  .containerStudentTabs {
+    visibility: hidden;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+  color: #333333;
+  margin-top:5.1%;
+  padding: 0;
+  
+  width: 100%;
+  height: auto;
+
+  background-color: white;
+  }
+  #signOutButton:hover{
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 600px) {
+    .containerStudentTabs {
+      margin-top:16.1%;
+    }
+  }
+  
+  .tabs {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+  }
+  .tabs__text {
+    -webkit-box-flex: 1;
+            flex: 1;
+    margin: 0;
+    cursor: pointer;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    opacity: 0.5;
+    background-color: #eeeeee;
+    border: 3px solid #eeeeee;
+    -webkit-transition: border-top 300ms ease-out;
+    transition: border-top 300ms ease-out;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  .tabs__content {
+    display: none;
+    -webkit-box-flex: 1;
+            flex: 1 1 100%;
+    -webkit-box-ordinal-group: 100;
+            order: 99;
+    padding: 40px 30px 30px 30px;
+  }
+  .tabs__button {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    position: absolute;
+  }
+  .tabs__button:checked + .tabs__text {
+    color: #0086e4;
+    opacity: 1;
+    background-color: white;
+    border-top: 3px solid #0086e4;
+  }
+  .tabs__button:checked + .tabs__text + .tabs__content {
+    display: block;
+  }
+    /* TABS ON STUDENT PAGE END*/
