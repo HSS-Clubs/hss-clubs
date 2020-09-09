@@ -51,7 +51,7 @@
                         <a class="nav-link" href="clubs.html">Clubs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
+                      <a class="nav-link" href="faq.html">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="signOutButton" style="visibility:hidden" onclick="signOut()">Sign Out</a>
@@ -61,10 +61,10 @@
         </div>
       </nav>
 
-      <div id="bodyContent" class="container"style="padding-top:30vh;">
+      <div id="bodyContent" class="container"style="">
         <div id="loggedOut" style="visibility: hidden;" class="row">
           <div class="col text-center">
-            <h1 class="display-2">join a club</h1>
+            <h1 class="display-2" style="padding-top:30vh;">join a club</h1>
      
             <div id="gSignInWrapper">
                 <div id="customBtn" class="customGPlusSignIn" data-onsuccess="onSignIn">
@@ -77,13 +77,63 @@
               <!-- <button onclick="checkIfLoggedIn()">Check Sign in</button> -->
         </div>
           </div>
-          <nav id="loggedIn" style="visibility: hidden;">
+          <div id="loggedIn" class="containerStudentTabs"style="">
+            <div class="tabs">
+                <!-- Sign In -->
+                <input type="radio" class="tabs__button" name="signForm" id="signIn" checked/>
+                <label class="tabs__text" for="signIn">My Clubs</label>
+                <div class="tabs__content">
+                  <h1>Welcome back!</h1>
+                  <p>Get back on your track</p>
+                  <form class="form">
+                      <div class="input-group">
+                          <input class="input-group__input" type="text" placeholder="&nbsp;" name="username" id="username" autocomplete="off" required />
+                          <label class="input-group__label" for="username">Username</label>
+                      </div>
+                      <div class="input-group">
+                          <input class="input-group__input" type="password" name="password" placeholder="&nbsp;" id="password" required />
+                          <label class="input-group__label" for="password">Password</label>
+                      </div>
+                      <!-- Normally I would create a grid system or use an existing to cater this issue -->
+                      <div class="flex-space-between">
+                          <label class="flex-align-center"><input type="checkbox" /> Remember Me</label>
+                          <p><a href="#">Forgot Password?</a></p>
+                      </div>
+                      <button type="submit">Submit</button>
+                  </form>
+              </div>
+                <!-- Sign Up -->
+                <input type="radio" class="tabs__button" name="signForm" id="signUp" />
+                <label class="tabs__text" for="signUp">All Clubs</label>
+                <div class="tabs__content">
+                  <h1>Welcome back!</h1>
+                  <p>Get back on your track</p>
+                  <form class="form">
+                      <div class="input-group">
+                          <input class="input-group__input" type="text" placeholder="&nbsp;" name="username" id="username" autocomplete="off" required />
+                          <label class="input-group__label" for="username">Username</label>
+                      </div>
+                      <div class="input-group">
+                          <input class="input-group__input" type="password" name="password" placeholder="&nbsp;" id="password" required />
+                          <label class="input-group__label" for="password">Password</label>
+                      </div>
+                      <!-- Normally I would create a grid system or use an existing to cater this issue -->
+                      <div class="flex-space-between">
+                          <label class="flex-align-center"><input type="checkbox" /> Remember Me</label>
+                          <p><a href="#">Forgot Password?</a></p>
+                      </div>
+                      <button type="submit">Submit</button>
+                  </form>
+              </div>  
+              
+              </div>
+        </div>
+          <!-- <nav id="loggedIn">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active col-md-6" id="nav-home-tab" data-toggle="tab" href="#nav-bio" role="tab" aria-controls="nav-bio" aria-selected="true">Bio</a>
               <a class="nav-item nav-link col-md-6" id="nav-profile-tab" data-toggle="tab" href="#nav-members" role="tab" aria-controls="nav-members" aria-selected="false">Members</a>
-              <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
             </div>
-          </nav>
+          </nav> -->
         </div>
       <script>startApp();</script>
     </body>
