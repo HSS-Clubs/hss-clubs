@@ -54,6 +54,7 @@ body {
 
   /* TABS ON STUDENT PAGE START*/
   .containerStudentTabs {
+    margin-bottom:20%;
     visibility: hidden;
     font-family: "Lato", sans-serif;
     font-size: 14px;
@@ -78,6 +79,7 @@ body {
   .tabs {
     display: -webkit-box;
     display: flex;
+    
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-flow: row wrap;
@@ -102,6 +104,7 @@ body {
   }
   .tabs__content {
     display: none;
+    
     -webkit-box-flex: 1;
             flex: 1 1 100%;
     -webkit-box-ordinal-group: 100;
@@ -139,11 +142,8 @@ body {
     overflow:hidden;
     overflow-wrap:break-word;
     width:700px;
-    position: relative;;
-
-    top:20%;
-    left:50%;
-    transform:translate(-50%,-50%)
+    position: relative;
+    left:30%;
 }
 .course h6{
     opacity:.6;
