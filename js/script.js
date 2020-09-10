@@ -1,7 +1,11 @@
 window.addEventListener('load', function () {
 checkIfLoggedIn()
-})
 
+})
+function adminsignin(){
+  sessionStorage.setItem('myUserEntity',"admin");
+  loggedIn()
+}
 //Google Sign In Button
 var googleUser;
 var auth2;
@@ -60,7 +64,7 @@ function onSignIn(googleUser) {
 
 function loggedIn(){
   var userEntity = {};
-  userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
+  userEntity = sessionStorage.getItem('myUserEntity');
   console.log(userEntity)
   document.getElementById("loggedOut").style.visibility = "hidden";
   document.getElementById("loggedOut").style.display = "none";
