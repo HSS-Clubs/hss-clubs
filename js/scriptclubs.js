@@ -30,7 +30,8 @@ window.addEventListener('load', function () {
     
     function loggedIn(){
       var userEntity = {};
-      userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
+      // JSON.parse
+      userEntity = (sessionStorage.getItem('myUserEntity'));
       console.log(userEntity)
       document.getElementById("signOutButton").style.display= "";
       document.getElementById("signOutButton").style.visibility = "visible";

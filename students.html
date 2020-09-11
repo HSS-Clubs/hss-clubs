@@ -24,7 +24,7 @@
     <!-- <meta name="google-signin-client_id" content="200579288184-pc5odbit1bduskobrae8no4orhaoa6jl.apps.googleusercontent.com"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://apis.google.com/js/api:client.js"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="query.js"></script> -->
     <script src="js/script.js"></script>
     
 </head>
@@ -123,6 +123,7 @@
 
       <div id="bodyContent" class="container"style="margin:0;padding:0; max-width:100%">
         <div id="loggedOut" style="visibility: hidden;" class="row">
+          <button onclick="adminsignin()">Admin Sign In</button>
           <div class="col text-center">
             <h2 class="display-2" style="padding-top:30vh;">join a club</h2>
      
@@ -142,8 +143,8 @@
                 <!-- Sign In -->
                 <input type="radio" class="tabs__button" name="signForm" id="signIn" checked/>
                 <label class="tabs__text" for="signIn">My Clubs</label>
-                <div class="tabs__content">
-                  <div class="course">
+                <div id="someclubstab" class="tabs__content">
+                  <div class="course ">
                     <div class="preview">
                       <h6>Club</h6>
                       <h2>Debate</h2>
@@ -152,7 +153,7 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                     <button onclick="playSound()"class="cardButton">Click here kids</button>
+                     <button class="cardButton"  style="outline:none;">Click here kids</button>
                   </div>
                   </div>
 
@@ -165,21 +166,22 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <button onclick="playSound()"class="cardButton">Click here kids</button>
+                      <button class="cardButton" style="outline:none;">Click here kids</button>
                   </div>
                   </div>
-                  <audio id="audio" src="movie_1.mp3" autoplay="false" ></audio>
+                  
+                  <!-- <audio id="audio" src="movie_1.mp3" autoplay="false" ></audio>
                   <script>
                   function playSound() {
                         var sound = document.getElementById("audio");
                         sound.play();
                     }
-                  </script>
+                  </script> -->
               </div>
                 <!-- Sign Up -->
                 <input type="radio" class="tabs__button" name="signForm" id="signUp" />
-                <label class="tabs__text" for="signUp">All Clubs</label>
-                <div class="tabs__content">
+                <label onclick="getAllClubs()" class="tabs__text" for="signUp">All Clubs</label>
+                <div id="allclubstab"  class="tabs__content">
                   <div class="course">
                     <div class="preview">
                       <h6>Club</h6>
@@ -189,7 +191,7 @@
                        
                      <h2>Debate</h2>
                      <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <button onclick="playSound()" class="cardButton">Click here kids</button>   
+                      <button class="cardButton" style="outline:none;">Click here kids</button>
                       
                   </div>
                   </div>
