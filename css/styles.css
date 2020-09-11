@@ -4,6 +4,26 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.jumbo {
+  background-color: #FF5A5A;
+  height: 100%;
+  font-family: 'tradegothiclt-bold', sans-serif;
+  font-size: 5em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.jumbo span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .jumbotron {
     height:100vh;
 }
@@ -155,7 +175,7 @@ body {
     margin:10px 0;
 }
 .preview {
-    background:#e40046;
+    background:#0086e4;
     color:#fff;
     padding:30px;
     width:250px;
@@ -173,10 +193,10 @@ body {
 }
 
 .cardButton{
-    background:#e40046;
+    background:white;
     border:1px solid transparent;
     box-shadow:0px 5px 10px rgba(0,0,0,0.2);
-    color:#fff;
+    color:black;
     font-size:16px;
     padding:10px 20px;
     position: relative;
@@ -192,15 +212,15 @@ body {
 
 .cardButton:hover{
     background:#fff;
-    color:#e40046;
-    border:1px solid #e40046;
+    color:#0086e4;
+    border:1px solid #0086e4;
     transform:scale(1.05)
 }
 
 @media(max-width:768px){
     .course{
         flex-direction: column;
-        width:90%;
+        width:0%;
         max-width:500px;
     }
     .preview{
@@ -231,3 +251,15 @@ body {
 }
 
 /* CARD ON STUDENT PAGE END*/
+
+.circle-img {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.circle-img img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
