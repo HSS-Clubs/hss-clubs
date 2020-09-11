@@ -61,10 +61,70 @@
         </div>
       </nav>
 
+      <div class="tabs">
+                <!-- Sign In -->
+                <input type="radio" class="tabs__button" name="signForm" id="signIn" checked/>
+                <label class="tabs__text" for="signIn">My Clubs</label>
+                <div class="tabs__content">
+                  <div class="course">
+                    <div class="preview">
+                      <h6>Club</h6>
+                      <h2>Debate</h2>
+                    </div>
+                    <div class="info">
+                       
+                     <h2>Debate</h2>
+                     <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                     <button onclick="playSound()"class="cardButton">Click here kids</button>
+                  </div>
+                  </div>
+
+                  <div class="course">
+                    <div class="preview">
+                      <h6>Club</h6>
+                      <h2>Debate</h2>
+                    </div>
+                    <div class="info">
+                       
+                     <h2>Debate</h2>
+                     <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                      <button onclick="playSound()"class="cardButton">Click here kids</button>
+                  </div>
+                  </div>
+                  <audio id="audio" src="movie_1.mp3" autoplay="false" ></audio>
+                  <script>
+                  function playSound() {
+                        var sound = document.getElementById("audio");
+                        sound.play();
+                    }
+                  </script>
+              </div>
+                <!-- Sign Up -->
+                <input type="radio" class="tabs__button" name="signForm" id="signUp" />
+                <label class="tabs__text" for="signUp">All Clubs</label>
+                <div class="tabs__content mt-5">
+                  <div class="course">
+                    <div class="preview">
+                      <h6>Club</h6>
+                      <h2>Debate</h2>
+                    </div>
+                    <div class="info">
+                       
+                     <h2>Debate</h2>
+                     <p class="p-trunc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                      <button onclick="playSound()" class="cardButton">Click here kids</button>   
+                      
+                  </div>
+                  </div>
+           
+              </div>  
+              
+              </div>
+
       <div id="bodyContent" class="container"style="margin:0;padding:0; max-width:100%">
         <div id="loggedOut" style="visibility: hidden;" class="row">
           <div class="col text-center">
-            <h1 class="display-2" style="padding-top:30vh;">join a club</h1>
+            <h2 class="display-2" style="padding-top:30vh;">join a club</h2>
      
             <div id="gSignInWrapper">
                 <div id="customBtn" class="customGPlusSignIn" data-onsuccess="onSignIn">
