@@ -222,30 +222,35 @@ body {
 @media(max-width:768px){
     .course{
         flex-direction: column;
-        width:0%;
+        width:100%;
         max-width:500px;
-    }
+        left:0;
+      height:780px;
+      }
     .preview{
         width:100%;
     }
     .preview h2{
         margin:10px 0 0;
+        font-size:40px;
+        margin-top:0px;
     }
     .info{
         padding-right:40px;
     }
     .info h2{
         margin-top:20px;
+        font-size:40px;
     }
     .info p{
-        padding-right:40px;
         margin-bottom:50px;
         display:inline-block;
     }
     .cardButton{
         padding:10px 40px;
         margin-left:150px;
-        top:10px;
+        widows: 40%;
+      top:0;
         /* float:right ; */
         font-size:14px;
     }
