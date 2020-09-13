@@ -11,7 +11,7 @@ $(document).ready(function() {
                 "visible": false,
                 "searchable": true
             }],
-        "pageLength": 10,
+        "pageLength": 100,
         "ordering":false
     } );
 } );
