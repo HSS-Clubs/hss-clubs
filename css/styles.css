@@ -3,6 +3,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     /* overflow:hidden; */
+    background-color:#1A1A1A;
+
 }
 
 #index {
@@ -11,7 +13,6 @@ body {
 }
 
 #students {
-  background-color:black;
   opacity:0.9;
 }
 
@@ -20,19 +21,18 @@ body {
 }
 
 #faq{
-  background-color:black;
+  background-color:#1A1A1A;
   opacity:0.9;
   height:93vh;
   overflow:hidden;
 }
 
 #clubs {
-  background:black;
+  background:#1A1A1A;
   opacity:0.9;
   text-transform: lowercase;
 }
 #bodyContent {
-  background-color:black;
 }
 ul a:hover{
   color: #BAD4AA !important;
@@ -58,7 +58,7 @@ nav li{
   margin:1;
 }
 .nav-item.nav-link.active {
-  background-color:black;
+  background-color:#1A1A1A;
   border:0px;
   border-top: 3px solid #BAD4AA;
 
@@ -68,7 +68,7 @@ nav li{
 }
 
 .nav-item.nav-link:hover {
-  border:black;
+  border:#1A1A1A;
 }
 li > a:after{
     content: '';
@@ -100,7 +100,7 @@ li > a:hover:after{
 }
 .navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
   color:#BAD4AA;
-  background-color:black;
+  background-color:#1A1A1A;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -126,9 +126,9 @@ li > a:hover:after{
 #banner {
     padding-top:0px;
     padding-bottom:0px;
-    background-color:black;
+    background-color:#1A1A1A;
     opacity:0.9;
-    height:87vh;
+    height:88vh;
 }
 
 .hide{
@@ -215,8 +215,8 @@ li > a:hover:after{
     cursor: pointer;
     padding: 20px 30px;
     font-size: 1.2em;
-    background-color: black;
-    border: 3px solid black;
+    background-color: #1A1A1A;
+    border: 3px solid #1A1A1A;
     -webkit-transition: border-top 300ms ease-out;
     transition: border-top 300ms ease-out;
     -webkit-transform-origin: top;
@@ -234,7 +234,7 @@ li > a:hover:after{
     -webkit-box-ordinal-group: 100;
             order: 99;
     padding: 40px 30px 30px 30px;
-    background-color:black;
+    background-color:#1A1A1A;
   }
   .tabs__button {
     visibility: hidden;
@@ -245,7 +245,7 @@ li > a:hover:after{
   .tabs__button:checked + .tabs__text {
     color: #BAD4AA ;
     opacity: 1;
-    background-color: black;
+    background-color: #1A1A1A;
     border-top: 3px solid #BAD4AA;
     text-transform: lowercase;
     font-family: 'Poppins', sans-serif;
@@ -305,7 +305,7 @@ li > a:hover:after{
     background:white;
     border:1px solid transparent;
     box-shadow:0px 5px 10px rgba(0,0,0,0.2);
-    color:black;
+    color:#1A1A1A;
     font-size:16px;
     padding:10px 20px;
     position: relative;
