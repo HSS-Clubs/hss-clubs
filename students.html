@@ -1,6 +1,16 @@
 <!-- client id:200579288184-pc5odbit1bduskobrae8no4orhaoa6jl.apps.googleusercontent.com -->
 <!-- client secret: jjIHJPrU5l1qSTiJAsI_nQJ5 -->
 <!DOCTYPE html>
+<style>
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+</style>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,10 +38,10 @@
     <script src="js/script.js"></script>
     
 </head>
-<body style="overflow-x:hidden; background-color: #E9ECEF;">
+<body>
 
-  <div id="students">
-  <nav class="shadow-none navbar navbar-dark navbar-expand-lg navbar-trans" style="background-color:black;opacity:0.9;padding-top:0px;padding-bottom:0px;color:white;">
+  <div id="students" style="height:200%;">
+  <nav class="shadow-none navbar navbar-dark navbar-expand-lg navbar-trans" style="background-color:#181818;opacity:0.9;padding-top:0px;padding-bottom:0px;color:white;">
     <div class="container">
       <a class="navbar-brand">
         <img src="imgs/hss.png" width="80" height="80" alt="">
@@ -62,11 +72,10 @@
   </nav>
     
 
-      <div id="bodyContent" class="container"style="margin:0;padding:0; max-width:100%">
+      <div id="bodyContent" class="container"style="height:100%;margin:0;padding:0; max-width:100%">
         <div id="loggedOut" style="visibility: hidden;" class="row">
-          <button onclick="adminsignin()">Admin Sign In</button>
           <div class="col text-center">
-            <h1 class="display-2" style="padding-top:30vh;">join a club</h1>
+            <h1 class="display-2" style="padding-top:30vh;color:white">join a club</h1>
      
             <div id="gSignInWrapper">
                 <div id="customBtn" class="customGPlusSignIn" data-onsuccess="onSignIn">
@@ -74,7 +83,7 @@
                     <span class="buttonText">Login With Google</span>
                 </div>
               </div>
-              <div id="name" style="font-size:13px;padding-top:10px">Sign in to begin joining clubs!</div>
+              <div id="name" style="font-size:13px;padding-top:10px;color:white">Sign in to begin joining clubs!</div>
               <!-- <a href="#" onclick="signOut();">Sign out</a> -->
               <!-- <button onclick="checkIfLoggedIn()">Check Sign in</button> -->
         </div>
@@ -165,10 +174,14 @@
         </div>
       <script>startApp();</script>
       </div>
-      <footer class="shadow-none footer"  style="text-align:center;background-color: black;color:white;padding-bottom:50px;">
-        <div class="shadow-none container">
-          <span class="text-muted">Got Questions? Contact us: <a style="color:#BAD4AA" href="mailto:hssclubs@gmail.com">hssclubs@gmail.com</a></span>
-        </div>
-      </footer>
+    </div>
+    </div>
+    
+
+    <footer class="shadow-none footer"  style="position:relative;text-align:center;background-color: #1A1A1A;opacity:0.9;color:white;padding-bottom:50px;">
+      <div class="shadow-none container">
+        <span class="text-muted">Got Questions? Contact us: <a style="color:#BAD4AA" href="mailto:hssclubs@gmail.com">hssclubs@gmail.com</a></span>
+      </div>
+    </footer>
     </body>
 </html>
