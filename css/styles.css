@@ -171,8 +171,9 @@ body {
     text-transform: uppercase;
 }
 .course h2{
-    letter-spacing:1px;
+    letter-spacing:0.5px;
     margin:10px 0;
+    font-size:1.4vw
 }
 .preview {
     background:#0086e4;
@@ -206,6 +207,7 @@ body {
     transition:all .4s ease-in-out;
     font-weight:bold;
     outline:none;
+    top:20px;
     border-radius:20px;
 }
 
@@ -242,11 +244,10 @@ body {
     }
     .cardButton{
         padding:10px 40px;
-        margin-left:130;
+        margin-left:150px;
         top:10px;
         /* float:right ; */
         font-size:14px;
-        bottom:30px;
     }
 }
 
