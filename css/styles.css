@@ -4,14 +4,16 @@ body {
     font-family: 'Poppins', sans-serif;
     /* overflow:hidden; */
     background-color:#1A1A1A;
+    overflow-x:hidden;
 
 }
 
 #index {
   height:100vh;
-    overflow:hidden;
 }
-
+.indexHeader{
+  padding-top:100px;
+}
 #students {
   opacity:0.9;
 }
@@ -118,10 +120,67 @@ li > a:hover:after{
   color: white;
   text-transform: lowercase;
 }
-
-@media screen and (max-width:768px) {
-  .content-desktop {display: none;}
+.display-2{
+  padding-top:30vh;
 }
+.footerStudents{
+  margin-top:355px;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top:80px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.faqFooter{
+  margin-top:44px;
+}
+@media screen and (max-width:768px) {
+  .faqFooter{
+    margin-top:0;
+  }
+  .content-desktop {display: none;}
+  .display-2{
+    padding-top:10vh;
+  }
+  .form-signin{
+    padding-top:0px;
+  }
+  .indexHeader{
+    padding-top:0px;
+  }
+  .footerStudents{
+    margin-top:165px;
+  }
+  body{
+    overflow-x:hidden;
+  }
+}
+
 
 #banner {
     padding-top:0px;
@@ -145,36 +204,7 @@ li > a:hover:after{
     padding-bottom:40px;
 }
 
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    padding-top:80px;
-    margin: 0 auto;
-  }
-  .form-signin .checkbox {
-    font-weight: 400;
-  }
-  .form-signin .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
-  }
-  .form-signin .form-control:focus {
-    z-index: 2;
-  }
-  .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+
 
   /* TABS ON STUDENT PAGE START*/
   .containerStudentTabs {
