@@ -86,6 +86,15 @@ li > a:hover:after{
     color: #BAD4AA;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.card-text {
+  padding-left:5vw;
+  padding-right:5vw;
+}
+
 .accordion {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
   border-radius:10px;
@@ -177,7 +186,7 @@ li > a:hover:after{
   }
 
   /* TABS ON STUDENT PAGE START*/
-  .containerStudentTabs {
+  /* .containerStudentTabs {
     margin-bottom:20%;
     visibility: hidden;
     font-family: "Lato", sans-serif;
@@ -252,9 +261,9 @@ li > a:hover:after{
   }
   .tabs__button:checked + .tabs__text + .tabs__content {
     display: block;
-  }
+  } */
     /* TABS ON STUDENT PAGE END*/
-/* CARD ON STUDENT PAGE START*/
+/* CARD ON STUDENT PAGE START */
 
 
 .course{
@@ -371,6 +380,15 @@ li > a:hover:after{
   width: 250px;
   height: 250px;
   overflow: hidden;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+.rounded-circle {
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
 }
 
 .circle-img img {
@@ -378,4 +396,8 @@ li > a:hover:after{
   transform: translateX(-50%);
   margin-left: 50%;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
 

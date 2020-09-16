@@ -19,24 +19,26 @@ body {
     <!-- Stylesheets & Scripts -->
     <link rel="stylesheet" href="signinbutton.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <meta name="google-signin-client_id" content="200579288184-pc5odbit1bduskobrae8no4orhaoa6jl.apps.googleusercontent.com"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- <meta name="google-signin-client_id" content="200579288184-pc5odbit1bduskobrae8no4orhaoa6jl.apps.googleusercontent.com"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    
+    <link rel="stylesheet" href="css/styles.css">
     <script src="query.js"></script>
     <script src="js/script.js"></script>
-    
 </head>
 <body>
 
@@ -76,7 +78,7 @@ body {
         <div id="loggedOut" style="visibility: hidden;" class="row">
           <div class="col text-center">
             <h1 class="display-2" style="padding-top:30vh;color:white">join a club</h1>
-     
+            <button onclick="adminsignin()">Admin Sign In</button>
             <div id="gSignInWrapper">
                 <div id="customBtn" class="customGPlusSignIn" data-onsuccess="onSignIn">
                     <img width="20px" class="icon" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
@@ -88,13 +90,26 @@ body {
               <!-- <button onclick="checkIfLoggedIn()">Check Sign in</button> -->
         </div>
           </div>
-          <div id="loggedIn" class="containerStudentTabs"style="">
+          <div id="loggedIn" style="">
+            <div class="container-fluid" style="text-align:center;padding-top:50px;padding-bottom:50px;">
+              <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active col-md-6" id="nav-home-tab" data-toggle="tab" href="#nav-bio" role="tab" aria-controls="nav-bio" aria-selected="true" style="border-bottom:0px;">Bio</a>
+                    <a class="nav-item nav-link col-md-6" id="nav-profile-tab" data-toggle="tab" href="#nav-members" role="tab" aria-controls="nav-members" aria-selected="false">Members</a>
+                    <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
+                  </div>
+                </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="container tab-pane fade show active pt-5" id="nav-bio" role="tabpanel" aria-labelledby="nav-bio-tab" style="text-align:left;">
+                  <script src="js/app.js" async defer></script>
+
+                </div>
+              </div>
             <div class="row d-flex flex-column">
               <div class="col-sm-12">
                 <div class="tabs justify-content-center">
                     <script src="js/app.js" async defer></script>
                     <!-- Sign In -->
-                    <input type="radio" class="tabs__button" name="signForm" id="signIn" checked/>
                     <label class="tabs__text" for="signIn">My Clubs</label>
                     <div class="tabs__content">
                     <div class="course">
