@@ -34,8 +34,7 @@ body {
   opacity:0.9;
   text-transform: lowercase;
 }
-#bodyContent {
-}
+
 ul a:hover{
   color: #BAD4AA !important;
 }
@@ -179,7 +178,7 @@ li > a:hover:after{
   .addtl {
     padding-top:3vh;
   }
-  }
+  
   .form-signin{
     padding-top:0px;
   }
