@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="en" style="overflow:hidden">
+>>>>>>> bd526b753c65db99d6cc4c78f60779f0352e619f
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSS Clubs</title>
+<<<<<<< HEAD
 
     <!-- Stylesheets & Scripts -->
 
@@ -58,5 +63,143 @@
             </div>
         </div>
       </nav>
+=======
+    <link rel="icon" type="image/png" href="imgs/hss.png">
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+   <!-- Custom Styles & Scripts -->
+   <link rel="stylesheet" href="css/styles.css">
+   <script src="js/app.js"></script>
+</head>
+<body>
+    <div id="faq">
+    <nav class="shadow-none navbar navbar-dark navbar-expand-lg navbar-trans" style="background-color:#1A1A1A;opacity:0.9;padding-top:0px;padding-bottom:0px;">
+        <div class="container">
+          <a class="navbar-brand"  href="index.html">
+            <img src="imgs/hss.png" width="80" height="80" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="students.html">Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="clubs.html">Clubs <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>      
+              <li class="nav-item">
+                <a class="nav-link" id="signOutButton" style="visibility:hidden" onclick="signOut()">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="accordion" id="faqExample">
+                        <div class="card" style="background-color:#1A1A1A;color:white;">
+                            <div class="card-header p-2" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Q: What is HSS Clubs?
+                                    </button>
+                                </h5>
+                            </div>
+        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                                <div class="card-body" style="padding-top:0px:padding-bottom:0px;">
+                                    <hr style="color:white;background-color:white;"> 
+                                    <b>Answer:</b> HSS Clubs is aimed at providing a virtual club fair & sign up in light of the COVID-19 and to avoid the crowdedness of the traditional club fair.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"  style="background-color:#1A1A1A;color:white;">
+                            <div class="card-header p-2" id="headingTwo">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Q: How does it work?
+                                </button>
+                            </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                                <div class="card-body">
+                                    <hr style="color:white;background-color:white;"> 
+                                    Bootstrap is the most popular CSS framework in the world. The latest version released in 2018 is Bootstrap 4. Bootstrap can be used to quickly build responsive websites.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"  style="background-color:#1A1A1A;color:white;">
+                            <div class="card-header p-2" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Q. What is another question?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                                <div class="card-body">
+                                    <hr style="color:white;background-color:white;"> 
+                                    The answer to the question can go here.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"  style="background-color:#1A1A1A;color:white;">
+                            <div class="card-header p-2" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Q. What is the next question?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqExample">
+                                <div class="card-body">
+                                    <hr style="color:white;background-color:white;"> 
+                                    The answer to this question can go here. This FAQ example can contain all the Q/A that is needed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+    </div>
+
+    <footer class="shadow-none faqFooter"  style="text-align:center;background-color: #1A1A1A;opacity:0.9;color:white;">
+        <div class="shadow-none container">
+          <span class="text-muted">Got Questions? Contact us: <a style="color:#BAD4AA" href="mailto:hssclubs@gmail.com">hssclubs@gmail.com</a></span>
+        </div>
+      </footer>
+
+    <!--container-->
+>>>>>>> bd526b753c65db99d6cc4c78f60779f0352e619f
     </body>
 </html>

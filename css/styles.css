@@ -1,11 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=sawp');
+
 body {
     font-family: 'Poppins', sans-serif;
+    /* overflow:hidden; */
+    background-color:#1A1A1A;
+    overflow-x:hidden;
+
 }
 
-.jumbotron {
-    height:100vh;
+#index {
+  height:100vh;
+}
+.indexHeader{
+  padding-top:100px;
+}
+#students {
+  opacity:0.9;
 }
 
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color:white;
+}
+
+#faq{
+  background-color:#1A1A1A;
+  opacity:0.9;
+  height:93vh;
+  overflow:hidden;
+}
+
+#clubs {
+  background:#1A1A1A;
+  opacity:0.9;
+  text-transform: lowercase;
+}
+
+ul a:hover{
+  color: #BAD4AA !important;
+}
+nav li{
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.page-link {
+  color: #BAD4AA;
+}
+
+.page-item.active .page-link {
+  color: white;
+  background:#BAD4AA;
+  border-color:#BAD4AA;
+}
+
+.nav-item.nav-link {
+  color:gray;
+  border-bottom:0px;
+  margin:1;
+}
+.nav-item.nav-link.active {
+  background-color:#1A1A1A;
+  border:0px;
+  border-top: 3px solid #BAD4AA;
+
+}
+.nav-item.nav-link.active:hover {
+  border-top: 3px solid #BAD4AA;
+}
+
+.nav-item.nav-link:hover {
+  border:#1A1A1A;
+}
+.signedOutClub{
+  text-align: center;
+}
+li > a:after{
+    content: '';
+    display: block;
+    height: 1.5px;
+    background: #BAD4AA;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+li > a:hover:after{
+    transform: scaleX(1);
+    transition: transform .3s;
+}
+.nav-item .active{
+    color: #BAD4AA;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.card-text {
+  padding-left:5vw;
+  padding-right:5vw;
+}
+
+.accordion {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  border-radius:10px;
+}
+
+.accordion button {
+  color:#BAD4AA
+}
+
+.accordion button:hover {
+  color:#BAD4AA;
+}
+.navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+  color:#BAD4AA;
+  background-color:#1A1A1A;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color:white;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color:#BAD4AA;
+}
+
+.jumbo {
+  height: 100%;
+  font-family: 'tradegothiclt-bold', sans-serif;
+  font-size: 5em;
+  color: white;
+  text-transform: lowercase;
+}
+.display-2{
+  padding-top:30vh;
+}
+.footerStudents{
+  margin-top:355px;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top:80px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.faqFooter{
+  margin-top:44px;
+}
+.cardBtn{
+  text-align:center;margin-left:5vw;
+  width:110px;
+  font-size:18px
+}
+@media screen and (max-width:768px) {
+  .faqFooter{
+    margin-top:0;
+  }
+  .signedOutClub{
+    font-size: 24px;
+    text-align: center;
+    margin-left:0;
+  }
+  .content-desktop {display: none;}
+  .display-2{
+    padding-top:10vh;
+  }
+  .addtl {
+    padding-top:3vh;
+  }
+  
+  .form-signin{
+    padding-top:0px;
+  }
+  .indexHeader{
+    padding-top:0px;
+  }
+  .footerStudents{
+    margin-top:165px;
+  }
+  body{
+    overflow-x:hidden;
+  }
+}
+
+
+#banner {
+    padding-top:0px;
+    padding-bottom:0px;
+    background-color:#1A1A1A;
+    opacity:0.9;
+    height:88vh;
+}
+
+.hide{
+  display:none;
+}
 .navbar {
     margin-bottom: 0px;
 }
@@ -17,33 +229,223 @@ body {
     padding-bottom:40px;
 }
 
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    padding-top:80px;
-    margin: 0 auto;
+
+
+  /* TABS ON STUDENT PAGE START*/
+  /* .containerStudentTabs {
+    margin-bottom:20%;
+    visibility: hidden;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+  color: #333333;
+  margin-top:2.9%;
+  padding: 0;
+  
+  width: 100%;
+  height: auto;
+  background-color: white;
   }
-  .form-signin .checkbox {
-    font-weight: 400;
+  #signOutButton:hover{
+    cursor: pointer;
   }
-  .form-signin .form-control {
+  @media only screen and (max-width: 600px) {
+    .containerStudentTabs {
+      margin-top:15.1%;
+    }
+  }
+  
+  .tabs {
+    display: -webkit-box;
+    display: flex;
+    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+  }
+  .tabs__text {
+    -webkit-box-flex: 1;
+            flex: 1;
+    margin: 0;
+    cursor: pointer;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    background-color: #1A1A1A;
+    border: 3px solid #1A1A1A;
+    -webkit-transition: border-top 300ms ease-out;
+    transition: border-top 300ms ease-out;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    text-transform: lowercase;
+    font-weight: bold;
+    text-align: center;
+    color:gray;
+  }
+  .tabs__content {
+    display: none;
+    
+    -webkit-box-flex: 1;
+            flex: 1 1 100%;
+    -webkit-box-ordinal-group: 100;
+            order: 99;
+    padding: 40px 30px 30px 30px;
+    background-color:#1A1A1A;
+  }
+  .tabs__button {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    position: absolute;
+  }
+  .tabs__button:checked + .tabs__text {
+    color: #BAD4AA ;
+    opacity: 1;
+    background-color: #1A1A1A;
+    border-top: 3px solid #BAD4AA;
+    text-transform: lowercase;
+    font-family: 'Poppins', sans-serif;
+  }
+  .tabs__button:checked + .tabs__text + .tabs__content {
+    display: block;
+  } */
+    /* TABS ON STUDENT PAGE END*/
+/* CARD ON STUDENT PAGE START */
+
+
+.course{
+    background: #f7f7f7;
+    font-family: 'Muli',sans-serif;
+    margin-bottom:40px;
+    border-radius:10px;
+    box-shadow:0px 10px 10px rgba(0,0,0,.2);
+    display:flex;
+    max-width:100%;
+    overflow:hidden;
+    overflow-wrap:break-word;
+    width:700px;
     position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
+    left:30%;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+.course h6{
+    opacity:.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.course h2{
+    letter-spacing:0.5px;
+    margin:10px 0;
+    font-size:1.4vw;
+}
+.preview {
+    background:#0086e4;
+    color:#fff;
+    padding:30px;
+    width:250px;
+    position:relative;
+    /* top:20px; */
+}
+.preview a{
+    color:#fff;
+    font-size:12px;
+    opacity:0.6;
+}
+.info{
+    padding:30px;
+    position:relative;
+    width:100%;
+}
+
+.cardButton{
+    background:white;
+    border:1px solid transparent;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    color:#1A1A1A;
+    font-size:16px;
+    padding:10px 20px;
+    position: relative;
+    margin-left:270px;    
+    letter-spacing: 1px;
+    cursor:pointer;
+    transition:all .4s ease-in-out;
+    font-weight:bold;
+    outline:none;
+    top:20px;
+    border-radius:20px;
+    margin-left:150px;
+}
+
+
+.cardButton:hover{
+    background:#fff;
+    color:#0086e4;
+    border:1px solid #0086e4;
+    transform:scale(1.05)
+}
+
+@media(max-width:768px){
+  .course{
+      flex-direction: column;
+      width:100%;
+      max-width:500px;
+      left:0;
+    height:780px;
+    }
+    .cardBtn {
+      margin-left:25vw;
+      margin-bottom:10px;
+      width:100px;
+      font-size:100%;
+    }
+  .preview{
+      width:100%;
   }
-  .form-signin .form-control:focus {
-    z-index: 2;
+  .preview h2{
+      margin:10px 0 0;
+      font-size:40px;
+      margin-top:0px;
   }
-  .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  .info{
+      padding-right:40px;
   }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  .info h2{
+      margin-top:20px;
+      font-size:40px;
   }
+  .info p{
+      margin-bottom:50px;
+      display:inline-block;
+  }
+  .cardButton{
+      padding:10px 40px;
+      margin-left:150px;
+      widows: 40%;
+    top:0;
+      /* float:right ; */
+      font-size:14px;
+  }
+}
+
+/* CARD ON STUDENT PAGE END*/
+
+.circle-img {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+.rounded-circle {
+  margin-right:auto;
+  margin-left:auto;
+  display:block;
+}
+
+.circle-img img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abel');

@@ -1,7 +1,11 @@
 window.addEventListener('load', function () {
 checkIfLoggedIn()
-})
 
+})
+function adminsignin(){
+  sessionStorage.setItem('myUserEntity',"admin");
+  loggedIn()
+}
 //Google Sign In Button
 var googleUser;
 var auth2;
@@ -60,17 +64,23 @@ function onSignIn(googleUser) {
 
 function loggedIn(){
   var userEntity = {};
-  userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
+  userEntity = sessionStorage.getItem('myUserEntity');
   console.log(userEntity)
   document.getElementById("loggedOut").style.visibility = "hidden";
+  document.getElementById("loggedOut").style.display = "none";
+  document.getElementById("loggedIn").style.display= "";
+  document.getElementById("signOutButton").style.display= "";
   document.getElementById("loggedIn").style.visibility = "visible";
   document.getElementById("signOutButton").style.visibility = "visible";
+
 }
 
 function loggedOut(){
    console.log("not signed in")
    document.getElementById("signOutButton").style.visibility = "hidden";
+   document.getElementById("signOutButton").style.display= "none";
    document.getElementById("loggedIn").style.visibility = "hidden";
+   document.getElementById("loggedIn").style.display= "none";
    document.getElementById("loggedOut").style.visibility = "visible";
 
 }
