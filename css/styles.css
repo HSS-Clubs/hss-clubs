@@ -175,6 +175,9 @@ li > a:hover:after{
   width:110px;
   font-size:18px
 }
+.content-mobile {
+  display:none;
+}
 @media screen and (max-width:768px) {
   .faqFooter{
     margin-top:0;
@@ -185,6 +188,9 @@ li > a:hover:after{
     margin-left:0;
   }
   .content-desktop {display: none;}
+  .content-mobile {
+    display:block;
+  }
   .display-2{
     padding-top:10vh;
   }
