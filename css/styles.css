@@ -71,6 +71,9 @@ nav li{
 .nav-item.nav-link:hover {
   border:#1A1A1A;
 }
+.signedOutClub{
+  text-align: center;
+}
 li > a:after{
     content: '';
     display: block;
@@ -167,9 +170,19 @@ li > a:hover:after{
 .faqFooter{
   margin-top:44px;
 }
+.cardBtn{
+  text-align:center;margin-left:5vw;
+  width:110px;
+  font-size:18px
+}
 @media screen and (max-width:768px) {
   .faqFooter{
     margin-top:0;
+  }
+  .signedOutClub{
+    font-size: 24px;
+    text-align: center;
+    margin-left:0;
   }
   .content-desktop {display: none;}
   .display-2{
@@ -230,7 +243,6 @@ li > a:hover:after{
   
   width: 100%;
   height: auto;
-
   background-color: white;
   }
   #signOutButton:hover{
@@ -378,6 +390,12 @@ li > a:hover:after{
       left:0;
     height:780px;
     }
+    .cardBtn {
+      margin-left:25vw;
+      margin-bottom:10px;
+      width:100px;
+      font-size:100%;
+    }
   .preview{
       width:100%;
   }
@@ -431,6 +449,3 @@ li > a:hover:after{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Abel');
-
-
-
