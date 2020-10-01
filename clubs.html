@@ -34,6 +34,7 @@
     <!-- Custom Styles & Scripts -->
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scriptclubs.js"></script>
+    <script src="query.js"></script>
     <script src="js/app.js"></script>
     <link rel="icon" type="image/png" href="imgs/icon.png">
 </head>
@@ -75,19 +76,14 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <!-- <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div> -->
-        <button class="btn btn-lg btn-outline-light btn-block" type="submit"  >Sign in</button>
+        <button class="btn btn-lg btn-outline-light btn-block"type="button" onclick="clubLogIn()" >Sign in</button>
       </form>
 
       <div class="container-fluid" style="text-align:center;padding-top:50px;padding-bottom:50px;">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active col-md-6" id="nav-home-tab" data-toggle="tab" href="#nav-bio" role="tab" aria-controls="nav-bio" aria-selected="true" style="border-bottom:0px;">Bio</a>
-              <a class="nav-item nav-link col-md-6" id="nav-profile-tab" data-toggle="tab" href="#nav-members" role="tab" aria-controls="nav-members" aria-selected="false">Members</a>
+              <a class="nav-item nav-link col-md-6" id="nav-profile-tab" onclick="redrawTable()"data-toggle="tab" href="#nav-members" role="tab" aria-controls="nav-members" aria-selected="false">Members</a>
               <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
             </div>
           </nav>
@@ -115,7 +111,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" onclick="gridCheckOneClicked()">
                                   <label class="form-check-label" for="gridCheck">
                                     Community Service Offered
                                   </label>
@@ -125,8 +121,8 @@
                        <div class="col-md-6">
                         <div class="form-group">
                             <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2">
+                            <label class="form-check-label" for="gridCheck2">
                                 Student Run
                             </label>
                             </div>
@@ -169,286 +165,25 @@
                         </script>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-lg mt-3" style="background-color:#BAD4AA;">Save</button>
+                    <button type="submit" class="btn btn-lg mt-3" value="notAssigned" onclick="updateClub()" id="saveButton" style="background-color:#BAD4AA;">Save</button>
                   </form>
             </div>
-            <div class="container tab-pane fade pt-5" id="nav-members" role="tabpanel" aria-labelledby="nav-members-tab" style="text-align:left;">
+            <div class="container tab-pane fade pt-5"  id="nav-members" role="tabpanel" aria-labelledby="nav-members-tab" style="text-align:left;">
                 <form style="color:white;">
-                    <h4 style="text-align:center;color:#BAD4AA">Members</h4>
-                    <table id="example" class="table table-bordered nowrap" style="width:100%" style="color:white;">
+                    <h4 style="text-align:center;color:#BAD4AA" >Members</h4>
+                    <div id="clubSignedIn" style="display: none;">
+                    <table id="example" class="table table-bordered nowrap" style="width:100%;" style="color:white;">
                         <thead style="background-color:white;">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>21tn3449@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>23gw4931@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>22ac3483@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Cedric Kelly</td>
-                                <td>24ck8976@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Airi Satou</td>
-                                <td>21as4938@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Brielle Williamson</td>
-                                <td>22bw4356@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Herrod Chandler</td>
-                                <td>21hc4738@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Rhona Davidson</td>
-                                <td>24rd8907@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Colleen Hurst</td>
-                                <td>23ch3498@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Sonya Frost</td>
-                                <td>22sf8493@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jena Gaines</td>
-                                <td>23jg4415@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Quinn Flynn</td>
-                                <td>24qf6767@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Charde Marshall</td>
-                                <td>21cm3490@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Haley Kennedy</td>
-                                <td>22hk8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Tatyana Fitzpatrick</td>
-                                <td>23tf0987@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Michael Silva</td>
-                                <td>23ms6776@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Paul Byrd</td>
-                                <td>22pb8943@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Gloria Little</td>
-                                <td>28gl1221@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Bradley Greer</td>
-                                <td>23bg7656@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Dai Rios</td>
-                                <td>21dr6543@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jenette Caldwell</td>
-                                <td>22jc8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Yuri Berry</td>
-                                <td>23yb7654@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>21tn3449@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>23gw4931@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>22ac3483@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Cedric Kelly</td>
-                                <td>24ck8976@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Airi Satou</td>
-                                <td>21as4938@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Brielle Williamson</td>
-                                <td>22bw4356@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Herrod Chandler</td>
-                                <td>21hc4738@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Rhona Davidson</td>
-                                <td>24rd8907@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Colleen Hurst</td>
-                                <td>23ch3498@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Sonya Frost</td>
-                                <td>22sf8493@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jena Gaines</td>
-                                <td>23jg4415@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Quinn Flynn</td>
-                                <td>24qf6767@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Charde Marshall</td>
-                                <td>21cm3490@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Haley Kennedy</td>
-                                <td>22hk8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Tatyana Fitzpatrick</td>
-                                <td>23tf0987@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Michael Silva</td>
-                                <td>23ms6776@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Paul Byrd</td>
-                                <td>22pb8943@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Gloria Little</td>
-                                <td>28gl1221@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Bradley Greer</td>
-                                <td>23bg7656@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Dai Rios</td>
-                                <td>21dr6543@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jenette Caldwell</td>
-                                <td>22jc8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Yuri Berry</td>
-                                <td>23yb7654@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>21tn3449@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>23gw4931@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>22ac3483@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Cedric Kelly</td>
-                                <td>24ck8976@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Airi Satou</td>
-                                <td>21as4938@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Brielle Williamson</td>
-                                <td>22bw4356@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Herrod Chandler</td>
-                                <td>21hc4738@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Rhona Davidson</td>
-                                <td>24rd8907@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Colleen Hurst</td>
-                                <td>23ch3498@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Sonya Frost</td>
-                                <td>22sf8493@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jena Gaines</td>
-                                <td>23jg4415@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Quinn Flynn</td>
-                                <td>24qf6767@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Charde Marshall</td>
-                                <td>21cm3490@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Haley Kennedy</td>
-                                <td>22hk8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Tatyana Fitzpatrick</td>
-                                <td>23tf0987@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Michael Silva</td>
-                                <td>23ms6776@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Paul Byrd</td>
-                                <td>22pb8943@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Gloria Little</td>
-                                <td>28gl1221@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Bradley Greer</td>
-                                <td>23bg7656@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Dai Rios</td>
-                                <td>21dr6543@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Jenette Caldwell</td>
-                                <td>22jc8998@wwprsd.org</td>
-                            </tr>
-                            <tr>
-                                <td>Yuri Berry</td>
-                                <td>23yb7654@wwprsd.org</td>
-                            </tr>
-                        </tbody>
                     </table>
+                </div>
+                <div id="clubSignedOut">
+                    <h2 class="signedOutClub">Sign In To View Your Clubs Members</h2>
+                </div>
                   </form>
             </div>
           </div>
