@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="query.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
 </head>
 <body style="overflow-x: hidden;">
 
@@ -94,10 +95,11 @@
           </nav>
           <div class="tab-content" id="nav-tabContent">
             <div class="container tab-pane fade show active pt-5" id="nav-bio" role="tabpanel" aria-labelledby="nav-bio-tab" style="text-align:left;">
-              <div class="card" style="border-radius:5x;">
+              <!-- card -->
+              <div class="card mt-5" style="border-radius:5x;">
                 <div class="square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
                     <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
-                    <div style="text-align:center;"><h2 style="text-align:center;">Debate</h2></div>
+                    <h2 class="card-title">Debate</h5>
                     <div class="row">
                         <div class="col-sm-12">
                             <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
@@ -111,7 +113,7 @@
                       <div class="row">
                         <div class="col-sm-9">
                           <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
-                      <a href="#" class="btn btn-primary pull-left content-desktop" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                      <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
                         </div>
                         <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
                           <a href="" style="color: #BAD4AA;">Club E-mail</a>
@@ -128,15 +130,304 @@
                               Community Service
                             </label>
                           </div>
-                          <a href="#" class="btn btn-primary pull-left content-mobile" style="text-align:center;margin-top:10px;">BUTTON</a>
                         </div>
                       </div>
                     </div>
                 </div>
             </div>
-            </div>
+            <!-- end of card -->
+            <!-- card -->
+            <div class="card mt-5" style="border-radius:5x;">
+              <div class="square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+                  <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+                  <h2 class="card-title">Debate</h5>
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                          data-holder-rendered="true">
+                      </div>
+                  </div>
+              </div>
+              <div class="card-body px-2" style="flex-wrap:wrap;">
+                  <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-9">
+                        <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                    <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                      </div>
+                      <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                        <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                        <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                        <div>
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Advisor Run
+                          </label>
+                        </div>
+                        <div>
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Community Service
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <!-- end of card -->
+          </div>
             <div class="container tab-pane fade pt-5" id="nav-members" role="tabpanel" aria-labelledby="nav-members-tab" style="text-align:left;">
-                
+              <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+              <div class="container-fluid" id="myItems">
+                <!-- card -->
+                <div class="card mt-5" style="border-radius:5x;">
+                  <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+                      <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+                      <h2 class="card-title">Debate</h5>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                              data-holder-rendered="true">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-body px-2" style="flex-wrap:wrap;">
+                      <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-9">
+                            <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                        <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                          </div>
+                          <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                            <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                            <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                            <div>
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">
+                                Advisor Run
+                              </label>
+                            </div>
+                            <div>
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">
+                                Community Service
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- end of card -->
+              <!-- card -->
+              <div class="card mt-5" style="border-radius:5x;">
+                <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+                    <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+                    <h2 class="card-title">Debate</h5>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                            data-holder-rendered="true">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body px-2" style="flex-wrap:wrap;">
+                    <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-9">
+                          <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                      <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                        </div>
+                        <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                          <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                          <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                          <div>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Advisor Run
+                            </label>
+                          </div>
+                          <div>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Community Service
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of card -->
+             <!-- card -->
+             <div class="card mt-5" style="border-radius:5x;">
+              <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+                  <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+                  <h2 class="card-title">Cookie Clicker</h5>
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                          data-holder-rendered="true">
+                      </div>
+                  </div>
+              </div>
+              <div class="card-body px-2" style="flex-wrap:wrap;">
+                  <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-9">
+                        <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                    <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                      </div>
+                      <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                        <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                        <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                        <div>
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Advisor Run
+                          </label>
+                        </div>
+                        <div>
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Community Service
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <!-- end of card -->
+          <!-- card -->
+          <div class="card mt-5" style="border-radius:5x;">
+            <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+                <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+                <h2 class="card-title">CSGO</h5>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                        data-holder-rendered="true">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body px-2" style="flex-wrap:wrap;">
+                <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                  <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                    </div>
+                    <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                      <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                      <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                      <div>
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Advisor Run
+                        </label>
+                      </div>
+                      <div>
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Community Service
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of card -->
+         <!-- card -->
+         <div class="card mt-5" style="border-radius:5x;">
+          <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+              <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+              <h2 class="card-title">Roblox</h5>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                      data-holder-rendered="true">
+                  </div>
+              </div>
+          </div>
+          <div class="card-body px-2" style="flex-wrap:wrap;">
+              <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+                <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                  </div>
+                  <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                    <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                    <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                    <div>
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        Advisor Run
+                      </label>
+                    </div>
+                    <div>
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        Community Service
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <!-- end of card -->
+      <!-- card -->
+      <div class="card mt-5" style="border-radius:5x;">
+        <div class="card-body square card-header border-0" style="text-align:center;background: #BAD4AA;color:white;">
+            <h6 style="text-align:center;text-transform:uppercase;">Humanities</h6>
+            <h2 class="card-title">Minecraft</h5>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="rounded-circle img-fluid" alt="100x100" src="imgs/debate.png" height="120vh" width="120vw"
+                    data-holder-rendered="true">
+                </div>
+            </div>
+        </div>
+        <div class="card-body px-2" style="flex-wrap:wrap;">
+            <!-- <h4 class="card-title" style="padding-top:1vw;" style="text-align:left;">Debate</h4> -->
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-9">
+                  <p class="card-text" style="text-align:left;">praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officiis dolore odio unde et voluptate blanditiis praesentium libero, quae quas, excepturi neque quaerat atque, illo eaque sed cum nisi ducimus.</p>
+              <a href="#" class="btn btn-primary pull-left" style="text-align:left;margin-left:5vw;">BUTTON</a>
+                </div>
+                <div class="col-sm-3 d-flex d-row flex-column align-items-center justify-content-left" style="text-align:left;">
+                  <a href="" style="color: #BAD4AA;">Club E-mail</a>
+                  <p style="margin-bottom:0;"><strong>Classroom Code: </strong>fjhoeaf</p>
+                  <div>
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Advisor Run
+                    </label>
+                  </div>
+                  <div>
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Community Service
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of card -->
+            </div>
             </div>
           </div>
       </div>

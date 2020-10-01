@@ -16,6 +16,8 @@ $(document).ready(function() {
     } );
 } );
 
+console.log("hello");
+
 // //typewriter effect on banner
 // document.addEventListener('DOMContentLoaded',function(event){
 //     // array with texts to type in typewriter
