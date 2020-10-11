@@ -104,6 +104,11 @@ li > a:hover:after{
   padding-right:5vw;
 }
 
+.additional {
+  font-style:italic;
+  color:lightgray;
+}
+
 .accordion {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
   border-radius:10px;
